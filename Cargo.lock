@@ -935,7 +935,7 @@ dependencies = [
  "impl-rlp",
  "impl-serde",
  "primitive-types",
- "uint",
+ "uint 0.9.0",
 ]
 
 [[package]]
@@ -983,24 +983,6 @@ name = "fs_extra"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2022715d62ab30faffd124d40b76f4134a550a87792276512b18d63272333394"
-
-[[package]]
-name = "fungible-token"
-version = "1.0.0"
-dependencies = [
- "near-contract-standards",
- "near-sdk",
-]
-
-[[package]]
-name = "fungible-token-wrapper"
-version = "0.0.1"
-dependencies = [
- "defi",
- "fungible-token",
- "near-sdk",
- "near-sdk-sim",
-]
 
 [[package]]
 name = "funty"
@@ -2047,6 +2029,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184"
 
 [[package]]
+name = "poolparty_token"
+version = "1.0.0"
+dependencies = [
+ "near-contract-standards",
+ "near-sdk",
+ "uint 0.8.5",
+]
+
+[[package]]
+name = "poolparty_token_wrapper"
+version = "1.0.0"
+dependencies = [
+ "defi",
+ "near-sdk",
+ "near-sdk-sim",
+ "poolparty_token",
+]
+
+[[package]]
 name = "ppv-lite86"
 version = "0.2.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2062,7 +2063,7 @@ dependencies = [
  "impl-codec",
  "impl-rlp",
  "impl-serde",
- "uint",
+ "uint 0.9.0",
 ]
 
 [[package]]
@@ -2807,6 +2808,18 @@ name = "typenum"
 version = "1.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "373c8a200f9e67a0c95e62a4f52fbf80c23b4381c05a17845531982fa99e6b33"
+
+[[package]]
+name = "uint"
+version = "0.8.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9db035e67dfaf7edd9aebfe8676afcd63eed53c8a4044fed514c8cccf1835177"
+dependencies = [
+ "byteorder",
+ "crunchy",
+ "rustc-hex",
+ "static_assertions",
+]
 
 [[package]]
 name = "uint"

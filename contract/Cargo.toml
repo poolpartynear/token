@@ -1,7 +1,7 @@
 [package]
-name = "fungible-token"
+name = "poolparty_token"
 version = "1.0.0"
-authors = ["Near Inc <hello@nearprotocol.com>"]
+authors = ["Guillermo Gallardo <gagdiez@poolparty.ar>"]
 edition = "2018"
 
 [lib]
@@ -10,3 +10,4 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 near-sdk = "3.1.0"
 near-contract-standards = "3.1.1"
+uint = { version = "0.8.3", default-features = false }
