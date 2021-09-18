@@ -9,7 +9,7 @@ describe('Pool Token', function () {
     user_B = 'test-account-1629670943068-5873996'
     user_C = 'test-account-1629670799126-8779043'
 
-    pool_party_contract = 'test-account-1629666757916-4879641'
+    pool_party_contract = 'test-account-1629845638745-7027135'
     token_contract = nearConfig.contractName
 
     const near = await nearlib.connect(nearConfig);
@@ -131,6 +131,7 @@ describe('Pool Token', function () {
     it("starts", async function(){
       await token_A.new()
       await cache_pool_party_reserve()
+      await raffle()
     })
 
     // Test that nothing can be done if the cache is not updated
@@ -151,22 +152,22 @@ describe('Pool Token', function () {
     })
 
     it("pool party has a prize", async function(){
-      /* let info = await get_pool_info(pool_A)
+      let info = await get_pool_info(pool_A)
       console.log(info)
       console.log("The reserve of pool party:", info.reserve)
       expect(info.reserve > 0).toBe(true)
 
-      //await deposit_and_stake(info.reserve, pool_A)
+      await deposit_and_stake(info.reserve, pool_A)
 
       let account_A = await get_account(user_A)
       console.log(account_A)
 
-      expect(account_A.staked_balance).toBe(info.reserve) */
+      expect(account_A.staked_balance).toBe(info.reserve)
     })
 
     it("the users can deposit in pool party", async function(){
-      //await deposit_and_stake(1, pool_B)
-      //await deposit_and_stake(1, pool_C)
+      await deposit_and_stake(1, pool_B)
+      await deposit_and_stake(1, pool_C)
     })
 
 
